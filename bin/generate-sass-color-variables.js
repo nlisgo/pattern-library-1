@@ -30,7 +30,8 @@ function removeFinalCharOfTypeFromString(str, char) {
  * @return {String} stringified json representation of sassData
  */
 function deriveJsonFromSass(sassData) {
-  const sassVarRegex = /\$([^:]*-color[^:]*): (#[^;]+);/g;
+  // hex, rgb or rgba
+  const sassVarRegex = /\$([^:]*-color[^:]*): ((#[^;]+)|rgba?\(([0-9]{1,3}, ?){2}[0-9]{1,3}(, ?0?\.[0-9]+)?\));/g;
   const replaceWith = (match, $1, $2) => {
     let replacement = '    {\n';
     replacement += `      "name": "${$1}",\n`;
