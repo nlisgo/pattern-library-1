@@ -1,2 +1,10 @@
 contentTitle:
   text: Content title
+subjects:
+  items:
+    - name:
+        text: Cell Biology
+      url: '#'
+    - name:
+        text: Epidemiology and Global Health
+      url: '#'

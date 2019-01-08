@@ -4,6 +4,40 @@
 
   {%- block body -%}
 
+    {% if subjects.items is iterable %}
+
+      {%- with subjects only -%}
+
+        {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list']) }) %}
+
+        <ol {%- include 'atoms-attributes' %}>
+
+          {% for subject in items %}
+
+            {%- with subject only -%}
+
+              {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list_item']) }) %}
+
+              <li {%- include 'atoms-attributes' %}>
+                {% if url %}
+                  <a href="{{ url }}" class="content-header__subject_link">
+                {% endif %}
+                <span class="content-header__subject">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
+                {% if url %}
+                  </a>
+                {% endif %}
+              </li>
+
+            {%- endwith -%}
+
+          {% endfor %}
+
+        </ol>
+
+      {%- endwith -%}
+
+    {% endif %}
+
     {%- with contentTitle only -%}
 
       {%- block title -%}
