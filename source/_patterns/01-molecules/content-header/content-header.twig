@@ -4,39 +4,47 @@
 
   {%- block body -%}
 
-    {% if subjects.items is iterable %}
+    {%- block subjects -%}
 
-      {%- with subjects only -%}
+      {% if subjects is defined %}
 
-        {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list']) }) %}
+        {%- with subjects only -%}
 
-        <ol {%- include 'atoms-attributes' %}>
+          {% if items is iterable and items|length > 0 %}
 
-          {% for subject in items %}
+            {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list']) }) %}
 
-            {%- with subject only -%}
+            <ol {%- include 'atoms-attributes' %}>
 
-              {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list_item']) }) %}
+              {% for subject in items %}
 
-              <li {%- include 'atoms-attributes' %}>
-                {% if url %}
-                  <a href="{{ url }}" class="content-header__subject_link">
-                {% endif %}
-                <span class="content-header__subject">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
-                {% if url %}
-                  </a>
-                {% endif %}
-              </li>
+                {%- with subject only -%}
 
-            {%- endwith -%}
+                  {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list_item']) }) %}
 
-          {% endfor %}
+                  <li {%- include 'atoms-attributes' %}>
+                    {% if url %}
+                      <a href="{{ url }}" class="content-header__subject_link">
+                    {% endif %}
+                    <span class="content-header__subject">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
+                    {% if url %}
+                      </a>
+                    {% endif %}
+                  </li>
 
-        </ol>
+                {%- endwith -%}
 
-      {%- endwith -%}
+              {% endfor %}
 
-    {% endif %}
+            </ol>
+
+          {% endif %}
+
+        {%- endwith -%}
+
+      {% endif %}
+        
+    {%- endblock -%}
 
     {%- with contentTitle only -%}
 
