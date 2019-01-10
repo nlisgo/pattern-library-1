@@ -3,3 +3,11 @@ attributes:
   lang: ar
 contentTitle:
   text: عنوان المحتوى
+categories:
+  items:
+    - name:
+        text: بيولوجيا الخلية
+      url: '#'
+    - name:
+        text: علم الأوبئة والصحة العالمية
+      url: '#'

@@ -2,3 +2,11 @@ attributes:
   lang: ja
 contentTitle:
   text: コンテンツのタイトル
+categories:
+  items:
+    - name:
+        text: 細胞生物学
+      url: '#'
+    - name:
+        text: 疫学とグローバルヘルス
+      url: '#'
