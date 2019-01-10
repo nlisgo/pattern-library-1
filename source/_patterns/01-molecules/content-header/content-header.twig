@@ -8,7 +8,7 @@
 
       {%- with categories|default([]) only -%}
 
-        {% if items|default(null) is iterable %}
+        {% if items is iterable and items|length > 0 %}
 
           {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list']) }) %}
 
