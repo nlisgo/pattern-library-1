@@ -4,45 +4,41 @@
 
   {%- block body -%}
 
-    {%- block subjects -%}
+    {%- block categories -%}
 
-      {% if subjects is defined %}
+      {%- with categories|default([]) only -%}
 
-        {%- with subjects only -%}
+        {% if items|default(null) is iterable %}
 
-          {% if items is iterable and items|length > 0 %}
+          {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list']) }) %}
 
-            {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list']) }) %}
+          <ol {%- include 'atoms-attributes' -%}>
 
-            <ol {%- include 'atoms-attributes' %}>
+            {% for category in items %}
 
-              {% for subject in items %}
+              {%- with category only -%}
 
-                {%- with subject only -%}
+                {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list_item']) }) %}
 
-                  {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__subject_list_item']) }) %}
+                <li {%- include 'atoms-attributes' -%}>
+                  {% if url %}
+                    <a href="{{ url }}" class="content-header__category_link">
+                  {% endif %}
+                  <span class="content-header__category">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
+                  {% if url %}
+                    </a>
+                  {% endif %}
+                </li>
 
-                  <li {%- include 'atoms-attributes' %}>
-                    {% if url %}
-                      <a href="{{ url }}" class="content-header__subject_link">
-                    {% endif %}
-                    <span class="content-header__subject">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
-                    {% if url %}
-                      </a>
-                    {% endif %}
-                  </li>
+              {%- endwith -%}
 
-                {%- endwith -%}
+            {% endfor %}
 
-              {% endfor %}
+          </ol>
 
-            </ol>
+        {% endif %}
 
-          {% endif %}
-
-        {%- endwith -%}
-
-      {% endif %}
+      {%- endwith -%}
         
     {%- endblock -%}
 
