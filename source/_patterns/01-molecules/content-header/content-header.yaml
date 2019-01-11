@@ -1,6 +1,8 @@
 contentTitle:
   text: Content title
 categories:
+  attributes:
+    aria-label: Category listings that include this article
   items:
     - name:
         text: Cell Biology

@@ -4,6 +4,8 @@ attributes:
 contentTitle:
   text: عنوان المحتوى
 categories:
+  attributes:
+    aria-label: قوائم الفئة التي تتضمن هذه المقالة
   items:
     - name:
         text: بيولوجيا الخلية
