@@ -9,6 +9,16 @@
   line-height: $vertical-height / $font-size;
 }
 
+@mixin _label-typeg($uppercase: true) {
+  font-family: $font-secondary;
+  font-weight: normal;
+  @include set-font-size-and-vertical-height(11);
+  letter-spacing: 0.5px;
+  @if $uppercase {
+    text-transform: uppercase;
+  }
+}
+
 @mixin _heading-base-typography() {
   font-family: $font-secondary;
   font-weight: 600;
@@ -65,4 +75,9 @@
   margin-bottom: 0.1em;
   max-height: 1em;
   vertical-align: middle;
+}
+
+@mixin label-category-typeg() {
+  @include _label-typeg();
+  color: $color-primary-normal;
 }
