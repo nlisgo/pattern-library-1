@@ -7,9 +7,11 @@ categories:
   attributes:
     aria-label: قوائم الفئة التي تتضمن هذه المقالة
   items:
-    - name:
+    - content:
+        attributes:
+          href: '#'
         text: بيولوجيا الخلية
-      url: '#'
-    - name:
+    - content:
+        attributes:
+          href: '#'
         text: علم الأوبئة والصحة العالمية
-      url: '#'

@@ -6,9 +6,11 @@ categories:
   attributes:
     aria-label: この記事を含むカテゴリの一覧
   items:
-    - name:
+    - content:
+        attributes:
+          href: '#'
         text: 細胞生物学
-      url: '#'
-    - name:
+    - content:
+        attributes:
+          href: '#'
         text: 疫学とグローバルヘルス
-      url: '#'

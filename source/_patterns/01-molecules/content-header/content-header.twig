@@ -1,46 +1,50 @@
-{% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header', 'wrapper']) }) %}
+{%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header', 'wrapper']) }) -%}
 
 <header {%- include 'atoms-attributes' %}>
 
   {%- block body -%}
 
-    {%- block categories -%}
+    {%- with categories|default({}) only -%}
 
-      {%- with categories|default([]) only -%}
+      {%- block categories -%}
 
-        {% if items is iterable and items|length > 0 %}
+        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list']) }) -%}
 
-          {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list']) }) %}
+        <ol {%- include 'atoms-attributes' %}>
 
-          <ol {%- include 'atoms-attributes' -%}>
+          {%- for item in items -%}
 
-            {% for category in items %}
+            {%- with item only -%}
+              {%- block item -%}
 
-              {%- with category only -%}
+                {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list__item']) }) -%}
 
-                {% set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list_item']) }) %}
+                <li {%- include('atoms-attributes') -%}>
 
-                <li {%- include 'atoms-attributes' -%}>
-                  {% if url %}
-                    <a href="{{ url }}" class="content-header__category_link">
-                  {% endif %}
-                  <span class="content-header__category">{%- include 'atoms-text' with {nodes: name.text} only -%}</span>
-                  {% if url %}
-                    </a>
-                  {% endif %}
+                  {%- with content only -%}
+                    {%- block content -%}
+
+                      {%- if attributes.href is defined -%}
+                        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['content-header__category_list__link']) }) -%}
+                      {%- endif -%}
+
+                      {%- include 'atoms-link' -%}
+
+                    {%- endblock content -%}
+                  {%- endwith -%}
+
                 </li>
 
-              {%- endwith -%}
+              {%- endblock item -%}
+            {%- endwith -%}
 
-            {% endfor %}
+          {%- endfor -%}
 
-          </ol>
+        </ol>
 
-        {% endif %}
+      {%- endblock -%}
 
-      {%- endwith -%}
-        
-    {%- endblock -%}
+    {%- endwith -%}
 
     {%- with contentTitle only -%}
 
