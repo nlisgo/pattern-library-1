@@ -88,6 +88,14 @@
   }
 }
 
+@mixin label-content-typography($color: $color-text-secondary, $uppercase: true) {
+  @include _label-typography($color, $uppercase);
+}
+
+@mixin label-subject-typography() {
+  @include _label-typography($color-primary-normal);
+}
+
 @mixin label-category-typography() {
   @include _label-typography($color-primary-normal);
 }
