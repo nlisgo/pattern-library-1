@@ -1,17 +1,2 @@
 contentTitle:
   text: Content title
-categories:
-  attributes:
-    aria-label: Category listings that include this article
-  items:
-    - content:
-        attributes:
-          href: '#'
-        text: Cell Biology
-    - content:
-        attributes:
-          href: '#'
-        text: Epidemiology and Global Health
-    - content:
-        attributes:
-        text: Cancer Biology - (Unlinked)

@@ -2,15 +2,3 @@ attributes:
   lang: ja
 contentTitle:
   text: コンテンツのタイトル
-categories:
-  attributes:
-    aria-label: この記事を含むカテゴリの一覧
-  items:
-    - content:
-        attributes:
-          href: '#'
-        text: 細胞生物学
-    - content:
-        attributes:
-          href: '#'
-        text: 疫学とグローバルヘルス
