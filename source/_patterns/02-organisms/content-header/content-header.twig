@@ -5,13 +5,11 @@
   {%- block body -%}
 
     {%- with categories|default({}) only -%}
-
       {%- block categories -%}
 
-        {% include 'molecules-item-tag-list' %}
+        {%- include 'molecules-item-tag-list' -%}
 
-      {%- endblock -%}
-
+      {%- endblock categories -%}
     {%- endwith -%}
 
     {%- with contentTitle only -%}
