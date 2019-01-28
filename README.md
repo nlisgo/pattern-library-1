@@ -21,7 +21,7 @@ config.data.breakpoint = {site: {}};
 config.data.breakpoint.site.small = 480;  
 config.data.breakpoint.site.medium = 730;  
 ```  
-
+   
 `config.layerAllocations` specifies which technology layers the properties of `config.data` are distributed to. Continuing the above example:  
 ```  
 config.layerAllocations = {  
