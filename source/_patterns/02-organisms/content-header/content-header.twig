@@ -7,7 +7,9 @@
     {%- with categories|default({}) only -%}
       {%- block categories -%}
 
-        {%- include 'molecules-item-tag-list' -%}
+        {%- if items|length -%}
+          {%- include 'molecules-tag-list' with {list: _context} only -%}
+        {%- endif -%}
 
       {%- endblock categories -%}
     {%- endwith -%}
