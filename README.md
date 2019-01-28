@@ -21,7 +21,89 @@ config.data.breakpoint = {site: {}};
 config.data.breakpoint.site.small = 480;  
 config.data.breakpoint.site.medium = 730;  
 ```  
-   
+list:
+  items:
+    - content:
+        attributes:
+          href: '#'
+        text: One
+    - content:
+        text: Two
+    - content:
+        text: Three
+    - content:
+        attributes:
+          href: '#'
+        text: Four
+    - content:
+        attributes:
+          href: '#'
+        text: Five
+    - content:
+        text: Six
+    - content:
+        text: Seven
+    - content:
+        attributes:
+          href: '#'
+        text: Eight
+    - content:
+        text: Nine
+    - content:
+        text: Ten
+    - content:
+        attributes:
+          href: '#'
+        text: Eleven
+    - content:
+        attributes:
+          href: '#'
+        text: Twelve
+    - content:
+        text: Thirteen
+    - content:
+        text: Fourteen
+    - content:
+        attributes:
+          href: '#'
+        text: Fifteen
+    - content:
+        text: Sixteen
+    - content:
+        text: Seventeen
+    - content:
+        attributes:
+          href: '#'
+        text: Eighteen
+    - content:
+        attributes:
+          href: '#'
+        text: Nineteen
+    - content:
+        text: Twenty
+    - content:
+        text: Twenty One
+    - content:
+        attributes:
+          href: '#'
+        text: Twenty Two
+    - content:
+        text: Twenty Three
+    - content:
+        text: Twenty Four
+    - content:
+        attributes:
+          href: '#'
+        text: Twenty Five
+    - content:
+        attributes:
+          href: '#'
+        text: Twenty Six
+    - content:
+        text: Twenty Seven
+    - content:
+        text: Twenty Eight
+
 `config.layerAllocations` specifies which technology layers the properties of `config.data` are distributed to. Continuing the above example:  
 ```  
 config.layerAllocations = {  
