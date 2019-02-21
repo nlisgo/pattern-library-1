@@ -1,0 +1,11 @@
+attributes:
+  lang: ja
+teasers:
+  - title:
+      attributes:
+        href: '#'
+      text: ティーザータイトル1
+  - title:
+      attributes:
+        href: '#'
+      text: ティーザータイトル2

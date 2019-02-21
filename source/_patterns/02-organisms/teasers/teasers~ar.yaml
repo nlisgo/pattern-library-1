@@ -1,0 +1,12 @@
+attributes:
+  dir: rtl
+  lang: ar
+teasers:
+  - title:
+      attributes:
+        href: '#'
+      text: العنوان التشويقي 1
+  - title:
+      attributes:
+        href: '#'
+      text: العنوان التشويقي 2
