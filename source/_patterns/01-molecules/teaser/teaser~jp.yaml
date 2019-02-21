@@ -1,4 +1,6 @@
 attributes:
   lang: ja
 title:
+  attributes:
+    href: '#'
   text: ティーザーのタイトル

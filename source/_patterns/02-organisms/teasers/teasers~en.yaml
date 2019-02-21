@@ -1,5 +1,9 @@
 teasers:
   - title:
+      attributes:
+        href: '#'
       text: Teaser title 1
   - title:
+      attributes:
+        href: '#'
       text: Teaser title 2
