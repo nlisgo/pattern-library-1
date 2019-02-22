@@ -8,7 +8,22 @@
       {% if text is defined %}
 
         {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
-        {%- include 'atoms-heading' with {level: level|default(4)} -%}
+
+        <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
+
+          {%- with title only -%}
+            {%- block title -%}
+
+              {%- if attributes.href is defined -%}
+                {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
+              {%- endif -%}
+
+              {%- include 'atoms-link' -%}
+
+            {%- endblock content -%}
+          {%- endwith -%}
+
+        </h{{ level|default(4) }}>
 
       {% endif %}
 
