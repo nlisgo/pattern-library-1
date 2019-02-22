@@ -5,27 +5,23 @@
   {%- with title|default({}) only -%}
     {%- block title -%}
 
-      {% if text is defined %}
+      {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
 
-        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
+      <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
 
-        <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
+        {%- with content only -%}
+          {%- block content -%}
 
-          {%- with title only -%}
-            {%- block title -%}
+            {%- if attributes.href is defined -%}
+              {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
+            {%- endif -%}
 
-              {%- if attributes.href is defined -%}
-                {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
-              {%- endif -%}
+            {%- include 'atoms-link' -%}
 
-              {%- include 'atoms-link' -%}
+          {%- endblock content -%}
+        {%- endwith -%}
 
-            {%- endblock content -%}
-          {%- endwith -%}
-
-        </h{{ level|default(4) }}>
-
-      {% endif %}
+      </h{{ level|default(4) }}>
 
     {%- endblock title -%}
   {%- endwith -%}

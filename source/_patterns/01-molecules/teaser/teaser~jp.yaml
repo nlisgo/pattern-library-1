@@ -1,6 +1,7 @@
 attributes:
   lang: ja
 title:
-  attributes:
-    href: '#'
-  text: ティーザーのタイトル
+  content:
+    attributes:
+      href: '#'
+    text: ティーザーのタイトル

@@ -1,4 +1,5 @@
 title:
-  attributes:
-    href: '#'
-  text: Teaser title
+  content:
+    attributes:
+      href: '#'
+    text: Teaser title 1

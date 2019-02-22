@@ -2,6 +2,7 @@ attributes:
   dir: rtl
   lang: ar
 title:
-  attributes:
-    href: '#'
-  text: العنوان التشويقي
+  content:
+    attributes:
+      href: '#'
+    text: العنوان التشويقي
