@@ -110,12 +110,15 @@
   @include _label-typography($color-primary-normal);
 }
 
-@mixin teaser-header-text-link-style() {
-  color: $color-text-normal;
-  text-decoration: none;
+@mixin teaser-title-text-link-style() {
 
-  &:hover {
-    color: $color-primary-dark;
+  .teaser__title_text_link {
+    color: $color-text-normal;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
   }
 
 }
