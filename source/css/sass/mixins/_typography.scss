@@ -109,3 +109,13 @@
 @mixin label-tag-typography() {
   @include _label-typography($color-primary-normal);
 }
+
+@mixin teaser-header-text-link-style() {
+  color: $color-text-normal;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-primary-dark;
+  }
+
+}
