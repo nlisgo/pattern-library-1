@@ -7,7 +7,7 @@
 
       {% if text is defined %}
 
-        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
+        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_text']) }) -%}
         {%- include 'atoms-heading' with {level: level|default(4)} -%}
 
       {% endif %}
