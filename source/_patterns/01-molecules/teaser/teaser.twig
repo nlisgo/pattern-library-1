@@ -2,7 +2,7 @@
 
 <div {%- include('atoms-attributes') -%}>
 
-  {%- with title|default({}) only -%}
+  {%- with title only -%}
     {%- block title -%}
 
       {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_text']) }) -%}
