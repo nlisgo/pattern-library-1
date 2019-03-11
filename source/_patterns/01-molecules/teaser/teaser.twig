@@ -21,7 +21,7 @@
                   {%- if attributes.href is defined -%}
                     {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
                   {%- endif -%}
-                  9
+
                   {%- include 'atoms-link' -%}
 
                 {%- endblock content -%}
