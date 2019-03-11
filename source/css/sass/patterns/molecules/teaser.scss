@@ -1,3 +1,22 @@
-.teaser__title_text {
-  @include teaser-title-text-link-style();
+@import "../../mixins/decorations";
+@import "../../mixins/spacing";
+@import "../../mixins/typography";
+
+.teaser {
+  @include blg-spacing("block-start", "small", "padding");
+  @include blg-spacing("block-end", "small", "margin");
+  @include divider("block-start");
+}
+
+.teaser__header {
+  @include blg-spacing("block-end", "extra-small", "margin");
+}
+
+.teaser__title {
+  @include h4-typography();
+  @include nospace();
+}
+
+.teaser__title_link {
+  @include hidden-link();
 }

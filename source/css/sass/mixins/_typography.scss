@@ -110,15 +110,11 @@
   @include _label-typography($color-primary-normal);
 }
 
-@mixin teaser-title-text-link-style() {
+@mixin hidden-link($hover-color: $color-primary-dark) {
+  color: inherit;
+  text-decoration: inherit;
 
-  .teaser__title_text_link {
-    color: $color-text-normal;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-primary-dark;
-    }
+  &:hover {
+    color: $hover-color;
   }
-
 }

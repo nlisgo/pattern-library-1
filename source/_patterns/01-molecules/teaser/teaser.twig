@@ -2,28 +2,39 @@
 
 <div {%- include('atoms-attributes') -%}>
 
-  {%- with title only -%}
-    {%- block title -%}
+  {%- with {attributes: {class: []}} -%}
+    {%- block header -%}
 
-      {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_text']) }) -%}
+      {%- set attributes = attributes|merge({class: attributes.class|merge(['teaser__header']) }) -%}
+      <header {%- include('atoms-attributes') -%}>
 
-      <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
+        {%- with title only -%}
+          {%- block title -%}
 
-        {%- with content only -%}
-          {%- block content -%}
+            {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
 
-            {%- if attributes.href is defined -%}
-              {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_text_link']) }) -%}
-            {%- endif -%}
+            <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
 
-            {%- include 'atoms-link' -%}
+              {%- with content only -%}
+                {%- block content -%}
 
-          {%- endblock content -%}
+                  {%- if attributes.href is defined -%}
+                    {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
+                  {%- endif -%}
+                  9
+                  {%- include 'atoms-link' -%}
+
+                {%- endblock content -%}
+              {%- endwith -%}
+
+            </h{{ level|default(4) }}>
+
+          {%- endblock title -%}
         {%- endwith -%}
 
-      </h{{ level|default(4) }}>
+      </header>
 
-    {%- endblock title -%}
+    {%- endblock header -%}
   {%- endwith -%}
 
 </div>
