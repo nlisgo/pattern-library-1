@@ -8,28 +8,15 @@
       {%- set attributes = attributes|merge({class: attributes.class|merge(['teaser__header']) }) -%}
       <header {%- include('atoms-attributes') -%}>
 
-        {%- with title only -%}
-          {%- block title -%}
+        {%- with heading only -%}
+          {%- block heading -%}
 
-            {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title']) }) -%}
+            {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__heading']) }) -%}
+            {%- set level = level|default(4) -%}
 
-            <h{{ level|default(4) }} {%- include('atoms-attributes') -%}>
+            {%- include 'atoms-heading' -%}
 
-              {%- with content only -%}
-                {%- block content -%}
-
-                  {%- if attributes.href is defined -%}
-                    {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__title_link']) }) -%}
-                  {%- endif -%}
-
-                  {%- include 'atoms-link' -%}
-
-                {%- endblock content -%}
-              {%- endwith -%}
-
-            </h{{ level|default(4) }}>
-
-          {%- endblock title -%}
+          {%- endblock heading -%}
         {%- endwith -%}
 
       </header>

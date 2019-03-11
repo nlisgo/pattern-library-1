@@ -1,7 +1,7 @@
 attributes:
   lang: ja
-title:
-  content:
+heading:
+  text:
     attributes:
       href: '#'
     text: ティーザーのタイトル

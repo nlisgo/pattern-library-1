@@ -12,11 +12,7 @@
   @include blg-spacing("block-end", "extra-small", "margin");
 }
 
-.teaser__title {
+.teaser__heading {
   @include h4-typography();
   @include nospace();
-}
-
-.teaser__title_link {
-  @include hidden-link();
 }
