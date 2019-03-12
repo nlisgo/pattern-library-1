@@ -1,8 +1,6 @@
 attributes:
   dir: rtl
   lang: ar
+href: '#'
 heading:
-  text:
-    attributes:
-      href: '#'
-    text: العنوان التشويقي
+  text: العنوان التشويقي

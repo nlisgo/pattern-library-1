@@ -8,7 +8,7 @@
       {%- set attributes = attributes|merge({class: attributes.class|merge(['teaser__header']) }) -%}
       <header {%- include('atoms-attributes') -%}>
 
-        {%- with heading only -%}
+        {%- with heading|merge({text: {attributes: {href: href}, text: heading.text} }) only -%}
           {%- block heading -%}
 
             {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser__heading']) }) -%}

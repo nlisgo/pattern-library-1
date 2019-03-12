@@ -1,78 +1,58 @@
 body:
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: A conserved morphogenetic mechanism for epidermal ensheathment of nociceptive sensory neurites
+        text: A conserved morphogenetic mechanism for epidermal ensheathment of nociceptive sensory neurites
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Spatiotemporal establishment of dense bacterial colonies growing on hard agar
+        text: Spatiotemporal establishment of dense bacterial colonies growing on hard agar
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Valence-encoding in the lateral habenula arises from the entopeduncular region
+        text: Valence-encoding in the lateral habenula arises from the entopeduncular region
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Importin-9 wraps around the H2A-H2B core to act as nuclear importer and histone chaperone
+        text: Importin-9 wraps around the H2A-H2B core to act as nuclear importer and histone chaperone
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Membrane bridging by Munc13-1 is crucial for neurotransmitter release
+        text: Membrane bridging by Munc13-1 is crucial for neurotransmitter release
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: The structure of the Ctf19c/CCAN from budding yeast
+        text: The structure of the Ctf19c/CCAN from budding yeast
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
         text:
-          attributes:
-            href: '#'
-          text:
-            - 'PUMILIO hyperactivity drives premature aging of '
-            - template: atoms-italic
-              arguments:
-                text: Norad
-            - -deficient mice
+          - 'PUMILIO hyperactivity drives premature aging of '
+          - template: atoms-italic
+            arguments:
+              text: Norad
+          - -deficient mice
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Mechanical instability and interfacial energy drive biofilm morphogenesis
+        text: Mechanical instability and interfacial energy drive biofilm morphogenesis
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: Two distinct mechanisms target the autophagy-related E3 complex to the pre-autophagosomal structure
+        text: Two distinct mechanisms target the autophagy-related E3 complex to the pre-autophagosomal structure
   - template: molecules-teaser
     arguments:
+      href: '#'
       heading:
-        text:
-          attributes:
-            href: '#'
-          text: >-
-            Proteotoxicity from aberrant ribosome biogenesis compromises cell fitnesspendent synapse stabilization in
-            the mammalian brain
+        text: >-
+          Proteotoxicity from aberrant ribosome biogenesis compromises cell fitnesspendent synapse stabilization in the
+          mammalian brain
