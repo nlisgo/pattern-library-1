@@ -1,0 +1,73 @@
+lang: ja
+
+body:
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 侵害受容感覚神経突起の表皮鞘形成のための保存された形態形成メカニズム
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 硬質寒天上で増殖する密集細菌コロニーの時空間的確立
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 側方手綱における原子価コード化は内虫嚢領域から生じる
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Importin-9はH2A-H2Bコアを包み込み、核インポーターおよびヒストンシャペロンとして作用
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Munc13-1による膜架橋は神経伝達物質放出に重要である
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 出芽酵母からのCtf19c/CCANの構造
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: PUMILIOの活動亢進はNorad欠損マウスの早期老化を促進する
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 機械的不安定性と界面エネルギーはバイオフィルム形態形成を促進する
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 2つの異なる機構がオートファジー関連E 3複合体をプレオートファゴソーム構造に標的化する
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: 異常なリボソーム生合成からの蛋白質毒性はほ乳類脳における細胞適合性シナプス安定化を危うく

@@ -1,0 +1,76 @@
+lang: ru
+
+body:
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Консервативный морфогенетический механизм эпидермальной оболочки ноцицептивных сенсорных нейритов
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Пространственно-временное образование плотных бактериальных колоний, растущих на твердом агаре
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Валентное кодирование в латеральной габенуле происходит из энтопедункулярной области
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: >
+            Importin-9 оборачивается вокруг ядра H2A-H2B, чтобы действовать как ядерный импортер и гистоновый шаперон
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Мембранное соединение с помощью Munc13-1 имеет решающее значение для высвобождения нейромедиатора
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Структура Ctf19c/CCAN из почкующихся дрожжей
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Гиперактивность PUMILIO способствует преждевременному старению мышей с дефицитом норада
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Механическая нестабильность и межфазная энергия приводят в движение морфогенез биопленки
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: Два различных механизма нацеливают связанный с аутофагией комплекс E3 на пре-аутофагосомную структуру
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: >
+            Протеотоксичность из-за аберрантного биогенеза рибосом нарушает стабилизацию синапса в мозге млекопитающих,
+            зависящую от пригодности клетки

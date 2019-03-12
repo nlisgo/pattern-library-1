@@ -1,0 +1,76 @@
+lang: ar
+dir: rtl
+
+body:
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: آلية مورفوجينية محفوظة لحفظ المورم من الخلايا العصبية الحسية المسبب للألم
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: التأسيس الزماني المكاني للمستعمرات البكتيرية الكثيفة التي تنمو على أجار قاسية
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: ينشأ تكافؤ التكافؤ في الهيبنولا الجانبية من المنطقة المحيطة بالعين
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: يلتف Importin-9 حول قلب H2A-H2B ليكون بمثابة مستورد نووي ورافعة هيستون
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: يعتبر سد الغشاء بواسطة Munc13-1 أمرًا ضروريًا لإطلاق الناقل العصبي
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: هيكل Ctf19c/CCAN من مهدها الخميرة
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: فرط النشاط PUMILIO يدفع الشيخوخة المبكرة للفئران التي تعاني من نقص نوراد
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: عدم الاستقرار الميكانيكية والطاقة بينية محرك التشكل بيوفيلم
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: هناك آليتان متميزتان تستهدفان مجمع E3 المرتبط بالبلعمة الذاتية إلى بنية ما قبل البلعوم
+  - template: molecules-teaser
+    arguments:
+      heading:
+        text:
+          attributes:
+            href: '#'
+          text: >
+            تسمم البروتينات الناتجة عن التخليق الحيوي للريبوسوم الشاذ يثبط استقرار تشابك اللياقة البدنية في دماغ
+            الثدييات
