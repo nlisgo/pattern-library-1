@@ -34,10 +34,6 @@
                 {%- with content only -%}
                   {%- block content -%}
 
-                    {%- if href is defined -%}
-                      {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list__link']) }) -%}
-                    {%- endif -%}
-
                     {%- include('molecules-teaser') -%}
 
                   {%- endblock content -%}
