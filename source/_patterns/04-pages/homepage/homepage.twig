@@ -1,1 +1,13 @@
-{% include 'templates-single-column-grid' with {content: body} only %}
+{% include 'templates-page-grid' with {
+  main: {
+    template: 'templates-content-grid',
+    arguments: {
+      content: [
+        {
+          area: 'primary',
+          content: body,
+        },
+      ],
+    },
+  },
+} only %}
