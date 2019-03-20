@@ -2,6 +2,7 @@
 @import "../../variables/color";
 @import "../../variables/content_header";
 @import "../../functions/types";
+@import "../../mixins/decorations";
 @import "../../mixins/media-query";
 @import "../../mixins/spacing";
 @import "../../mixins/typography";
@@ -9,22 +10,14 @@
 .content-header {
   color: $color-text-normal;
   text-align: center;
-  @include blg-spacing("block-start", "medium");
-  @include blg-spacing("block-end", "small");
-
-  &:after {
-    border-bottom: 1px solid $color-text-dividers;
-    border-block-end: 1px solid $color-text-dividers;
-    content: "";
-    display: block;
-    @include padding($baselinegrid-space-small - 1, "block-start");
-    width: 100%;
-  }
+  @include blg-spacing("block-start", "medium", "margin");
+  @include blg-spacing("block-end", "small", "margin");
+  @include divider("block-end");
 }
 
 .content-header__title {
   @include margin(0, "block-start");
-  @include blg-spacing("block-end", "small", "margin");
+  @include blg-spacing("block-end", "medium", "margin");
 }
 
 .content-header__title--xx-short {
