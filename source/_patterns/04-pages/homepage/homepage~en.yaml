@@ -1,58 +1,52 @@
 body:
-  - template: molecules-teaser
+  - template: organisms-teaser-list
     arguments:
-      href: '#'
-      heading:
-        text: A conserved morphogenetic mechanism for epidermal ensheathment of nociceptive sensory neurites
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Spatiotemporal establishment of dense bacterial colonies growing on hard agar
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Valence-encoding in the lateral habenula arises from the entopeduncular region
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Importin-9 wraps around the H2A-H2B core to act as nuclear importer and histone chaperone
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Membrane bridging by Munc13-1 is crucial for neurotransmitter release
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: The structure of the Ctf19c/CCAN from budding yeast
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text:
-          - 'PUMILIO hyperactivity drives premature aging of '
-          - template: atoms-italic
-            arguments:
-              text: Norad
-          - -deficient mice
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Mechanical instability and interfacial energy drive biofilm morphogenesis
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: Two distinct mechanisms target the autophagy-related E3 complex to the pre-autophagosomal structure
-  - template: molecules-teaser
-    arguments:
-      href: '#'
-      heading:
-        text: >-
-          Proteotoxicity from aberrant ribosome biogenesis compromises cell fitnesspendent synapse stabilization in the
-          mammalian brain
+      list:
+        items:
+          - content:
+              href: '#'
+              heading:
+                text: A conserved morphogenetic mechanism for epidermal ensheathment of nociceptive sensory neurites
+          - content:
+              href: '#'
+              heading:
+                text: Spatiotemporal establishment of dense bacterial colonies growing on hard agar
+          - content:
+              href: '#'
+              heading:
+                text: Valence-encoding in the lateral habenula arises from the entopeduncular region
+          - content:
+              href: '#'
+              heading:
+                text: Importin-9 wraps around the H2A-H2B core to act as nuclear importer and histone chaperone
+          - content:
+              href: '#'
+              heading:
+                text: Membrane bridging by Munc13-1 is crucial for neurotransmitter release
+          - content:
+              href: '#'
+              heading:
+                text: The structure of the Ctf19c/CCAN from budding yeast
+          - content:
+              href: '#'
+              heading:
+                text:
+                  - 'PUMILIO hyperactivity drives premature aging of '
+                  - template: atoms-italic
+                    arguments:
+                      text: Norad
+                  - -deficient mice
+          - content:
+              href: '#'
+              heading:
+                text: Mechanical instability and interfacial energy drive biofilm morphogenesis
+          - content:
+              href: '#'
+              heading:
+                text: Two distinct mechanisms target the autophagy-related E3 complex to the pre-autophagosomal structure
+          - content:
+              href: '#'
+              heading:
+                text: >-
+                  Proteotoxicity from aberrant ribosome biogenesis compromises cell fitnesspendent synapse stabilization in the
+                  mammalian brain
