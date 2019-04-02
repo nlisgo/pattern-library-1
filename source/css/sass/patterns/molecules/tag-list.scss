@@ -1,20 +1,19 @@
 @import "../../mixins/sizes";
 @import "../../mixins/typography";
+@import "../../variables/baselinegrid";
 
 .tag-list {
-  @include blg-spacing("block-end", "small", "margin");
+  @include block-spacing();
 }
 
 .tag-list__title {
   @include label-content-typography();
-  @include padding(0, "block");
+  @include block-spacing($end: 0);
 }
 
 .tag-list__list {
-  list-style: none;
-  @include blg-spacing("block-end", "small", "margin");
+  @include list-style-none();
   @include label-tag-typography();
-  @include padding(0, "inline-start");
 }
 
 .tag-list__list--single-line {
@@ -22,15 +21,16 @@
 }
 
 .tag-list__item {
-  display: inline;
+  display: inline-block;
   @include label-tag-typography();
 
   &:after {
-    content: ", ";
+    display: inline;
+    content: ",\a0";
   }
 
   &:lang(ar):after {
-    content: "، ";
+    content: "،\a0";
   }
 
   &:lang(ja):after {
