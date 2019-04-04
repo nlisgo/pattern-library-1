@@ -2,17 +2,7 @@
 @import "../../mixins/spacing";
 @import "../../mixins/typography";
 
-.teaser {
-  @include blg-spacing("block-start", "small", "padding");
-  @include blg-spacing("block-end", "small", "margin");
-  @include divider("block-start");
-}
-
-.teaser__header {
-  @include blg-spacing("block-end", "extra-small", "margin");
-}
-
 .teaser__heading {
   @include h4-typography();
-  @include nospace();
+  @include block-spacing($start:$baselinegrid-space-small, $end: $baselinegrid-space-small);
 }
