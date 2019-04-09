@@ -52,6 +52,10 @@
 
       {%- else -%}
 
+        {%- if empty is not iterable -%}
+          {%- set empty = [{template: 'atoms-paragraph', arguments: {text: empty}}] -%}
+        {%- endif -%}
+
         {%- with {empty: empty} only -%}
           {%- block empty -%}
 
