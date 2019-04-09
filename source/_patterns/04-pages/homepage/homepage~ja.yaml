@@ -1,8 +1,14 @@
 lang: ja
 
+contentHeader:
+  contentTitle:
+    text: デモンストレーション国際ジャーナル
+
 body:
   - template: organisms-teaser-list
     arguments:
+      title:
+        text: 最新記事
       list:
         items:
           - content:

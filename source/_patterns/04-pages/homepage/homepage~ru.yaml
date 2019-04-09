@@ -1,8 +1,14 @@
 lang: ru
 
+contentHeader:
+  contentTitle:
+    text: Международный журнал для демонстрации
+
 body:
   - template: organisms-teaser-list
     arguments:
+      title:
+        text: Последние статьи
       list:
         items:
           - content:

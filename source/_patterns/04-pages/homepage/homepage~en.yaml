@@ -1,6 +1,12 @@
+contentHeader:
+  contentTitle:
+    text: The International Journal for Demonstration
+
 body:
   - template: organisms-teaser-list
     arguments:
+      title:
+        text: Latest articles
       list:
         items:
           - content:

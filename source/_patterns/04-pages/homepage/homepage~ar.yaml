@@ -1,9 +1,15 @@
 lang: ar
 dir: rtl
 
+contentHeader:
+  contentTitle:
+    text: المجلة الدولية للمظاهرة
+
 body:
   - template: organisms-teaser-list
     arguments:
+      title:
+        text: أحدث المقالات
       list:
         items:
           - content:
