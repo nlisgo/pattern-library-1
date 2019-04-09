@@ -1,4 +1,6 @@
 title:
+  attributes:
+    id: listing-title
   level: 1
   text: Listing title
 list:
