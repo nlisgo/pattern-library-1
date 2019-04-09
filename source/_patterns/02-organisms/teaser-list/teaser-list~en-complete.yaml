@@ -1,0 +1,16 @@
+title:
+  text: Listing title
+list:
+  items:
+    - content:
+        href: '#'
+        heading:
+          text: Teaser title 1
+    - content:
+        href: '#'
+        heading:
+          text: Teaser title 2
+    - content:
+        href: '#'
+        heading:
+          text: Teaser title 3

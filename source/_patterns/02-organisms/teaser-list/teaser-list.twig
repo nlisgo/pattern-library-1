@@ -1,6 +1,6 @@
 {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list']) }) -%}
 
-<div {%- include('atoms-attributes') -%}>
+<div {%- include 'atoms-attributes' -%}>
 
   {%- with title|default({}) only -%}
     {%- block title -%}
@@ -18,35 +18,49 @@
   {%- with list only -%}
     {%- block list -%}
 
-      {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list__list']) }) -%}
+      {%- if items|default([])|length -%}
 
-      <ol {%- include('atoms-attributes') -%}>
+        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list__list']) }) -%}
 
-        {%- for item in items -%}
+        <ol {%- include 'atoms-attributes' -%}>
 
-          {%- with item only -%}
-            {%- block item -%}
+          {%- for item in items -%}
 
-              {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list__item']) }) -%}
+            {%- with item only -%}
+              {%- block item -%}
 
-              <li {%- include('atoms-attributes') -%}>
+                {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['teaser-list__item']) }) -%}
 
-                {%- with content only -%}
-                  {%- block content -%}
+                <li {%- include 'atoms-attributes' -%}>
 
-                    {%- include('molecules-teaser') -%}
+                  {%- with content only -%}
+                    {%- block content -%}
 
-                  {%- endblock content -%}
-                {%- endwith -%}
+                      {%- include 'molecules-teaser' -%}
 
-              </li>
+                    {%- endblock content -%}
+                  {%- endwith -%}
 
-            {%- endblock item -%}
-          {%- endwith -%}
+                </li>
 
-        {%- endfor -%}
+              {%- endblock item -%}
+            {%- endwith -%}
 
-      </ol>
+          {%- endfor -%}
+
+        </ol>
+
+      {%- else -%}
+
+        {%- with {empty: empty} only -%}
+          {%- block empty -%}
+
+            {%- include 'atoms-text' with {nodes: empty} only -%}
+
+          {%- endblock empty -%}
+        {%- endwith -%}
+
+      {%- endif -%}
 
     {%- endblock list -%}
   {%- endwith -%}
