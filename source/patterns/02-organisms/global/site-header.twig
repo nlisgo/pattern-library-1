@@ -1,0 +1,33 @@
+{%- import 'atoms-html' as html -%}
+
+{%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header']) }) -%}
+
+<header {{- html.attributes(attributes) }}>
+
+  {%- block body -%}
+
+    {%- set logo = logo|default({})|merge({html: html}) -%}
+
+    {%- if logo.image is not defined or logo.image.src is not defined -%}
+      {%- set logo = logo|merge({image: {src: '../../images/logo.svg'}}) -%}
+    {%- endif -%}
+
+    {%- with logo only -%}
+      {%- block logo -%}
+
+        {%- if attributes|default({}).href is defined -%}
+          {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo_link']) }) -%}
+          <a {{- html.attributes(attributes) }}>
+            {%- include 'atoms-image' with {attributes: {}} -%}
+          </a>
+        {%- else -%}
+          {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo']) }) -%}
+          {%- include 'atoms-image' -%}
+        {%- endif -%}
+
+      {%- endblock logo -%}
+    {%- endwith -%}
+
+  {%- endblock -%}
+
+</header>
