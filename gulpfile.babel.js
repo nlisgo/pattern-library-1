@@ -58,6 +58,7 @@ const buildConfig = (invocationArgs, sourceRoot, testRoot, buildRoot) => {
   config.dir.src.sass = `${config.sourceRoot}/sass`;
   config.dir.src.sassVendor = `${config.dir.src.sass}/vendor`;
   config.dir.src.fonts = `${config.sourceRoot}/fonts`;
+  config.dir.src.images = `${config.sourceRoot}/images`;
   config.dir.src.patterns = `${config.sourceRoot}/patterns`;
   config.dir.src.meta = `${config.sourceRoot}/meta`;
   config.dir.src.js = `${config.sourceRoot}/js`;
@@ -68,6 +69,7 @@ const buildConfig = (invocationArgs, sourceRoot, testRoot, buildRoot) => {
   config.dir.build.src = `${config.buildRoot}/source`;
   config.dir.build.css = `${config.dir.build.src}/css`;
   config.dir.build.fonts = `${config.dir.build.src}/fonts`;
+  config.dir.build.images = `${config.dir.build.src}/images`;
   config.dir.build.js = `${config.dir.build.src}/js`;
   config.dir.build.meta = `${config.dir.build.src}/_meta`;
   config.dir.build.patterns = `${config.dir.build.src}/_patterns`;
@@ -229,6 +231,10 @@ const patternLabFonts = () =>
   gulp.src(config.files.src.fonts)
     .pipe(gulp.dest(config.dir.build.fonts));
 
+const patternLabImages = () =>
+  gulp.src(config.files.src.images)
+    .pipe(gulp.dest(config.dir.build.images));
+
 const patternLabMeta = () =>
   gulp.src(config.files.src.meta)
     .pipe(gulp.dest(config.dir.build.meta));
@@ -243,7 +249,7 @@ const patternLabStubs = () =>
       .map(path => fs.promises.mkdir(path, {recursive: true})),
   );
 
-const generatePatternLab = gulp.parallel(patternLabFonts, patternLabMeta, patternLabPatterns, patternLabStubs);
+const generatePatternLab = gulp.parallel(patternLabFonts, patternLabImages, patternLabMeta, patternLabPatterns, patternLabStubs);
 
 export const buildPatternLab = gulp.series(cleanPatternLab, generatePatternLab);
 
@@ -313,7 +319,7 @@ export default gulp.series(assemble, exportPatterns);
 
 const watchJs = () => gulp.watch([config.files.src.js, config.files.test.js], buildJs);
 
-const watchPatternLab = () => gulp.watch([config.dir.src.fonts, config.dir.src.meta, config.dir.src.patterns], buildPatternLab);
+const watchPatternLab = () => gulp.watch([config.dir.src.fonts, config.dir.src.images, config.dir.src.meta, config.dir.src.patterns], buildPatternLab);
 
 const watchSass = () => gulp.watch(config.files.src.sass.concat([config.files.test.sass]), buildCss);
 
