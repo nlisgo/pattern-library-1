@@ -1,4 +1,6 @@
 logo:
+  attributes:
+    href: '#'
   image:
     src: ../../images/logo.svg
     alt: ''
