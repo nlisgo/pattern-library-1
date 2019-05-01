@@ -9,7 +9,7 @@
     "acorn": "^6.1.1",
     "ansi-colors": "^3.2.4",
     "babel-loader": "^8.0.5",
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "color": "^3.1.0",
@@ -55,6 +55,7 @@
     "node": ">=10.12"
   },
   "scripts": {
-    "test": "gulp test"
+    "testConfig": "npx mocha ./test/libero-config",
+    "test": "npm testConfig && npx gulp test"
   }
 }
