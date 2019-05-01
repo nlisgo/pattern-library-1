@@ -1,21 +1,5 @@
 {%- import 'atoms-html' as html -%}
 
-{%- macro defaultimage(attributes = {}) -%}
-  {%- import 'atoms-html' as html -%}
-  <picture {{- html.attributes(attributes) }}>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 144">
-      <defs>
-        <style>.cls-1{fill:#9fa0a4;}.cls-2{fill:#0a9dd9;}.cls-3{fill:#1757a2;}</style>
-      </defs>
-      <title>libero-logo</title>
-      <rect class="cls-1" y="128" width="48" height="16"/>
-      <circle class="cls-2" cx="104" cy="8" r="8"/>
-      <polygon class="cls-3" points="48 112 0 112 0 0 16 0 16 96 48 96 48 112"/>
-      <rect class="cls-2" x="96" y="32" width="16" height="48"/>
-    </svg>
-  </picture>
-{%- endmacro -%}
-
 {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header']) }) -%}
 
 <header {{- html.attributes(attributes) }}>
@@ -27,23 +11,10 @@
     {%- with logo only -%}
       {%- block logo -%}
 
-        {%- if attributes|default({}).href is defined -%}
-          {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo_link']) }) -%}
-          <a {{- html.attributes(attributes) }}>
-            {%- if image is not defined or image.src is not defined -%}
-              {{ _self.defaultimage({}) }}
-            {%- else -%}
-              {%- include 'atoms-image' with {attributes: {}} -%}
-            {%- endif -%}
-          </a>
-        {%- else -%}
-          {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo']) }) -%}
-          {%- if image is not defined or image.src is not defined -%}
-            {{ _self.defaultimage(attributes) }}
-          {%- else -%}
-            {%- include 'atoms-image' -%}
-          {%- endif -%}
-        {%- endif -%}
+        {%- set image = image|default({})|merge({src: '../../images/logo.svg'}) -%}
+        {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo']) }) -%}
+
+        {%- include 'atoms-image' -%}
 
       {%- endblock logo -%}
     {%- endwith -%}
