@@ -1,11 +1,21 @@
 {%- import 'atoms-html' as html -%}
 
-<picture {{- html.attributes(attributes|default({})) }}>
+{%- set picture -%}
+  <picture {{- html.attributes(attributes|default({})|merge({href: false})) }}>
 
-  {%- for source in sources|default([]) -%}
-    <source {{- html.attributes(source) }}>
-  {%- endfor -%}
+    {%- for source in sources|default([]) -%}
+      <source {{- html.attributes(source) }}>
+    {%- endfor -%}
 
-  <img {{- html.attributes(image) }}>
+    <img {{- html.attributes(image) }}>
 
-</picture>
+  </picture>
+{%- endset -%}
+
+{%- if attributes|default({}).href is defined -%}
+  <a href="{{ attributes.href }}" class="linked-image">
+    {{ picture }}
+  </a>
+{%- else -%}
+  {{ picture }}
+{%- endif -%}
