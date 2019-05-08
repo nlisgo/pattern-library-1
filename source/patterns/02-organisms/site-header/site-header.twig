@@ -11,7 +11,7 @@
     {%- with logo only -%}
       {%- block logo -%}
 
-        {%- set image = image|default({})|merge({src: '../../images/logo.svg'}) -%}
+        {%- set image = image|default({})|merge({src: asset('images/logo.svg')}) -%}
         {%- set attributes = attributes|default({})|merge({class: attributes.class|default([])|merge(['site-header__logo']) }) -%}
 
         {%- include 'atoms-image' -%}
